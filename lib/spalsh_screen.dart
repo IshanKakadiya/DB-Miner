@@ -5,15 +5,6 @@ import 'dart:math';
 import "package:flutter/material.dart";
 import 'package:google_fonts/google_fonts.dart';
 
-// void main() {
-//   runApp(
-//     MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       home: spalsh_screen_paage(),
-//     ),
-//   );
-// }
-
 class spalsh_screen_paage extends StatefulWidget {
   const spalsh_screen_paage({super.key});
 
