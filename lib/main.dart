@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, unused_local_variable, no_leading_underscores_for_local_identifiers
 
 import 'package:animal_biograpy_app/model/api.dart';
+import 'package:animal_biograpy_app/spalsh_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'helper/image_api_helper.dart';
@@ -8,10 +9,11 @@ import 'helper/image_api_helper.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    initialRoute: "/",
     theme: ThemeData.dark(),
+    initialRoute: "spalsh_screen_paage",
     routes: {
       "/": (context) => const Home_Page(),
+      "spalsh_screen_paage": (context) => const spalsh_screen_paage(),
     },
   ));
 }
@@ -34,25 +36,10 @@ class _Home_PageState extends State<Home_Page> {
     super.initState();
     // getApi();
     getAllData = ImageAPIHelper.imageAPIHelper.getImage(name: "cheetah");
-    animalValue = animal[0];
+    animalValue = "Cheetah";
   }
 
   // getAPi() async {}
-
-  List<String> animal = [
-    "Cheetah",
-    "Lion",
-    "Frog",
-    "Crocodile",
-    "Alligator",
-    "Monitor lizard",
-    "Salamander",
-    "Toad",
-    "Newt",
-    "Iguana",
-    "Snake",
-    "Green dragon lizard",
-  ];
 
   late String animalValue = "";
   bool openWindo = false;
@@ -126,7 +113,7 @@ class _Home_PageState extends State<Home_Page> {
                               () => setState(
                                 () {
                                   Navigator.of(context).pop();
-                                  int i = 0;
+                                  i = 0;
                                 },
                               ),
                             );

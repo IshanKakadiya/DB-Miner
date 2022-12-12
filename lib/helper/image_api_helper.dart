@@ -10,11 +10,15 @@ class ImageAPIHelper {
 
   Future<List<AnimalAndImages>?> getImage({required String name}) async {
     String uri = "https://api.api-ninjas.com/v1/animals?name=$name";
-    String uri2 = "https://source.unsplash.com/random/?$name,wild animal";
+    String uri2 = "https://source.unsplash.com/random/?\$$name,animal";
 
     http.Response res2 = await http.get(
       Uri.parse(uri2),
     );
+
+    print("----------------");
+    print(uri2);
+    print("----------------");
 
     http.Response res = await http.get(
       Uri.parse(uri),
